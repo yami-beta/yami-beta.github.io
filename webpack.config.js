@@ -1,14 +1,10 @@
 const webpack = require('webpack');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
 let plugins = [
   new webpack.DefinePlugin({
     'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
-  }),
-  new HtmlWebpackPlugin({
-    template: path.resolve(__dirname, 'src', 'index.html')
   }),
 ];
 
@@ -21,7 +17,7 @@ if (process.env.NODE_ENV === 'production') {
       sourceMap: false,
     }),
   ];
-  devtool = null;
+  devtool = false;
 }
 
 module.exports = {
@@ -29,8 +25,9 @@ module.exports = {
     index: [ path.resolve(__dirname, 'src', 'index.js') ]
   },
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: '[name].[chunkhash].js'
+    path: path.resolve(__dirname, 'assets'),
+    filename: '[name].js',
+    publicPath: '/assets'
   },
   resolve: {
     extensions: ['.js', '.jsx'],
@@ -43,10 +40,11 @@ module.exports = {
         exclude: /node_modules/,
       },
       {
-        test: /\.css$/,
+        test: /\.scss$/,
         use: [
-          'style-loader',
+          { loader: 'style-loader' },
           { loader: 'css-loader', options: { importLoaders: 1, modules: true, localIdentName: '[path][name]--[local]--[hash:base64]' } },
+          { loader: 'sass-loader' },
         ],
       }
     ],
@@ -54,7 +52,6 @@ module.exports = {
   plugins,
   devtool,
   devServer: {
-    contentBase: path.join(__dirname, 'dist'),
-    watchContentBase: true,
+    contentBase: path.resolve(__dirname),
   },
 };
