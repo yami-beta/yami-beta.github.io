@@ -1,5 +1,9 @@
 @import "../node_modules/sanitize.css/sanitize.css";
 
+body {
+  font-family: sans-serif;
+}
+
 @media screen and (max-width: 425px) {
   :root {
     font-size: 90%;
