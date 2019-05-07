@@ -1,5 +1,5 @@
 import React from 'react';
-import { circularLoading } from '@yami_beta/react-circular-loading';
+import { circularLoading } from '@yami-beta/react-circular-loading';
 import styles from './Works.scss';
 
 const CircularLoading = circularLoading();
