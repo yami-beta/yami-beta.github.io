@@ -16,7 +16,7 @@ const Works = (props) => {
         <dl>
           <dt>Project site</dt>
           <dd><a href="https://yami-beta.github.io/react-circular-loading" target="_blank" rel="noopener noreferrer">React Circular Loading</a></dd>
-          <dt><i className="devicon-github-plain"></i>&nbsp;Github</dt>
+          <dt><i className="devicon-github-plain"></i>&nbsp;GitHub</dt>
           <dd><a href="https://github.com/yami-beta/react-circular-loading" target="_blank" rel="noopener noreferrer">react-circular-loading</a></dd>
           <dt>Qiita</dt>
           <dd><a href="https://qiita.com/yami_beta/items/0d226ff9b5b3d9b9d441" target="_blank" rel="noopener noreferrer">ローディング用の React コンポーネントを作った - Qiita</a></dd>
@@ -26,7 +26,7 @@ const Works = (props) => {
         <h3>license-info-webpack-plugin</h3>
         <p>Webpack plugin for making a list of package's LICENSE information.</p>
         <dl>
-          <dt><i className="devicon-github-plain"></i>&nbsp;Github</dt>
+          <dt><i className="devicon-github-plain"></i>&nbsp;GitHub</dt>
           <dd><a href="https://github.com/yami-beta/license-info-webpack-plugin" target="_blank" rel="noopener noreferrer">license-info-webpack-plugin</a></dd>
           <dt>はてなブログ</dt>
           <dd><a href="http://yami-beta.hateblo.jp/entry/2017/10/10/093943" target="_blank" rel="noopener noreferrer">ライセンスコメントを出力する webpack プラグインを作りました - 備忘録β版</a></dd>
@@ -39,7 +39,7 @@ const Works = (props) => {
           asyncomplete.vim is async completion for Vim 8 and NeoVim
         </p>
         <dl>
-          <dt><i className="devicon-github-plain"></i>&nbsp;Github</dt>
+          <dt><i className="devicon-github-plain"></i>&nbsp;GitHub</dt>
           <dd><a href="https://github.com/yami-beta/asyncomplete-omni.vim" target="_blank" rel="noopener noreferrer">asyncomplete-omni.vim</a></dd>
         </dl>
       </section>
